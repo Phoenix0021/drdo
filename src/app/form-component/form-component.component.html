@@ -1,0 +1,118 @@
+<div class = "container">
+
+    <h1>Enter the details</h1>
+    <form #login="ngForm" (ngSubmit)="submit(login)">
+        <div class="form-group"> 
+            
+            <label for="EST_COST">Enter the Estimated Cost</label><br>
+            <input type="integer" name="EST_COST" id="est_cost" class="form-control" ngModel>  
+
+        </div>
+        <pre></pre>
+
+
+        <div class="form-group"> 
+            <label for="MODEOFTENDER">Please select the mode of tender</label><br>
+            <select name="Mode_OF_Tender" id="mode_of_tender" class="form-control" ngModel>
+                <option *ngFor="let mode_of of mode_of_tender" value={{mode_of}}>
+                    {{mode_of}}
+                    
+                </option>
+            </select>
+
+            <!-- <wj-combo-box [itemsSource]="mode_of_tender" id="mode_of_tender"></wj-combo-box> -->
+
+         <!--   <input type="integer" name="MODEOFTENDER" class="form-control" ngModel> -->
+
+        </div>
+        <pre></pre>
+
+
+        <div class="form-group"> 
+            <label for="METHOD_OF_PURCHASE">Please select the method of purchase</label><br>
+            <select name="METHOD_OF_PURCHASE" id="method_of_purchase" class="form-control" ngModel>
+                <option *ngFor="let method_of of method_of_purchase" value={{method_of}}>
+                    {{method_of}}
+                    
+                </option>
+            </select>
+            <!-- <wj-combo-box [itemsSource]="method_of_purchase"></wj-combo-box> -->
+
+           <!-- <input type="integer" name="METHOD_OF_PURCHASE" class="form-control" ngModel> -->
+
+        </div>
+        <pre></pre>
+
+
+        <div class="form-group"> 
+            <label for="FINANCIAL_POWER_CODE">Enter the financial power code</label><br>
+            <input type="integer" name="FINANCIAL_POWER_CODE" class="form-control" ngModel>
+        </div>
+        <pre></pre>
+
+
+        <div class="form-group"> 
+            <label for="CFA_CODE">Select the CFA code</label><br>
+            <select name="CFA_CODE" id="cfa_code" class="form-control" ngModel>
+                <option *ngFor="let cfaCode of cfa_code" value={{cfaCode}}>
+                    {{cfaCode}}
+                    
+                </option>
+            </select>
+            <!-- <wj-combo-box [itemsSource]="cfa_code"></wj-combo-box> -->
+
+            <!-- <input type="integer" name="CFA_CODE" class="form-control" ngModel> -->
+            
+        </div>
+        <pre></pre>
+
+
+        <div class="form-group"> 
+            <label for="CONCURRENCE_BY">Select the concurrence</label><br>
+            <select name="concurrence_by" id="concurrence_by" class="form-control" ngModel>
+                <option *ngFor="let concurrenceBy of concurrence_by" value={{concurrenceBy}}>
+                    {{concurrenceBy}}
+                    
+                </option>
+            </select>
+            <!-- <wj-combo-box [itemsSource]="concurrence_by" ></wj-combo-box> -->
+            <!--<input type="integer" name="CONCURRENCE_BY" class="form-control" ngModel> -->
+        </div>
+        <pre></pre>
+
+
+
+        <div class="form-group"> 
+            <label for="BUDGET_HEAD_CODE">Enter the Budget Head Code</label><br>
+            <select name="budget_head_code" id="budget_head_code" class="form-control" ngModel>
+                <option *ngFor="let budgetHeadCode of budget_head_code" value={{budgetHeadCode}}>
+                    {{budgetHeadCode}}
+                    
+                </option>
+            </select>
+            <!-- <wj-combo-box [itemsSource]="budget_head_code" ></wj-combo-box> -->
+
+         <!--   <input type="integer" name="BUDGET_HEAD_CODE" class="form-control" ngModel> -->
+        </div>
+        <pre></pre>
+
+        <div class="form-group"> 
+            <label for="IS_PAC">Choose the PAC status</label><br>
+            <select name="pac_status " id="pac_status" class="form-control" ngModel>
+                <option *ngFor="let pacStatus  of pac_status " value={{pacStatus}}>
+                    {{pacStatus}}
+                    
+                </option>
+            </select>
+            <!-- <wj-combo-box [itemsSource]="is_pac"></wj-combo-box> -->
+
+            <!-- <input type="integer" name="IS_PAC" class="form-control" ngModel> -->
+        </div>
+        <pre></pre>
+
+        <button class="btn btn-primary" type="submit" style="height:30px; width:150px">Submit</button>
+
+        
+
+    </form>
+</div>
