@@ -1,5 +1,10 @@
 *{
-    background-color: light rgb(224, 224, 224);
+    background-image:url('/assets/images/circularlogo.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    
+   
 }
 div{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

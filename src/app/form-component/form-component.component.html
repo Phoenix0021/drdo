@@ -1,10 +1,11 @@
 <div class = "container">
-
-    <h1>Enter the details</h1>
+ <br>
+ <br>
+    <h1 style = "position:relative; left:1px;">Enter the details</h1>
     <form #login="ngForm" (ngSubmit)="submit(login)">
         <div class="form-group"> 
             
-            <label for="EST_COST">Enter the Estimated Cost</label><br>
+            <label for="EST_COST">Estimated Cost</label><br>
             <input type="integer" name="EST_COST" id="est_cost" class="form-control" ngModel>  
 
         </div>
@@ -12,7 +13,7 @@
 
 
         <div class="form-group"> 
-            <label for="MODEOFTENDER">Please select the mode of tender</label><br>
+            <label for="MODEOFTENDER"> Mode of tender</label><br>
             <select name="Mode_OF_Tender" id="mode_of_tender" class="form-control" ngModel>
                 <option *ngFor="let mode_of of mode_of_tender" value={{mode_of}}>
                     {{mode_of}}
@@ -29,7 +30,7 @@
 
 
         <div class="form-group"> 
-            <label for="METHOD_OF_PURCHASE">Please select the method of purchase</label><br>
+            <label for="METHOD_OF_PURCHASE">Method of purchase</label><br>
             <select name="METHOD_OF_PURCHASE" id="method_of_purchase" class="form-control" ngModel>
                 <option *ngFor="let method_of of method_of_purchase" value={{method_of}}>
                     {{method_of}}
@@ -45,14 +46,14 @@
 
 
         <div class="form-group"> 
-            <label for="FINANCIAL_POWER_CODE">Enter the financial power code</label><br>
+            <label for="FINANCIAL_POWER_CODE">Financial power code</label><br>
             <input type="integer" name="FINANCIAL_POWER_CODE" class="form-control" ngModel>
         </div>
         <pre></pre>
 
 
         <div class="form-group"> 
-            <label for="CFA_CODE">Select the CFA code</label><br>
+            <label for="CFA_CODE">CFA code</label><br>
             <select name="CFA_CODE" id="cfa_code" class="form-control" ngModel>
                 <option *ngFor="let cfaCode of cfa_code" value={{cfaCode}}>
                     {{cfaCode}}
@@ -68,7 +69,7 @@
 
 
         <div class="form-group"> 
-            <label for="CONCURRENCE_BY">Select the concurrence</label><br>
+            <label for="CONCURRENCE_BY">Concurrence</label><br>
             <select name="concurrence_by" id="concurrence_by" class="form-control" ngModel>
                 <option *ngFor="let concurrenceBy of concurrence_by" value={{concurrenceBy}}>
                     {{concurrenceBy}}
@@ -83,7 +84,7 @@
 
 
         <div class="form-group"> 
-            <label for="BUDGET_HEAD_CODE">Enter the Budget Head Code</label><br>
+            <label for="BUDGET_HEAD_CODE">Budget Head Code</label><br>
             <select name="budget_head_code" id="budget_head_code" class="form-control" ngModel>
                 <option *ngFor="let budgetHeadCode of budget_head_code" value={{budgetHeadCode}}>
                     {{budgetHeadCode}}
@@ -97,7 +98,7 @@
         <pre></pre>
 
         <div class="form-group"> 
-            <label for="IS_PAC">Choose the PAC status</label><br>
+            <label for="IS_PAC">PAC status</label><br>
             <select name="pac_status " id="pac_status" class="form-control" ngModel>
                 <option *ngFor="let pacStatus  of pac_status " value={{pacStatus}}>
                     {{pacStatus}}
