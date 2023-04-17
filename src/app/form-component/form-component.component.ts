@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-form-component',
@@ -7,10 +7,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./form-component.component.css']
 })
 export class FormComponentComponent {
-  submit(login: any)
-  {
-    console.log(login);
-    console.log("Details entered successfully ")
+  constructor(private http: HttpClient) {}
+  
+  submit(login: any) {
+    console.log("Details entered successfully ");
+    console.log(login.controls);
+    const formValue = {
+      EST_COST: login.controls.EST_COST.value,
+      MODEOFTENDER: login.controls.Mode_OF_Tender.value,
+      METHOD_OF_PURCHASE: login.controls.METHOD_OF_PURCHASE.value,
+      FINANCIAL_POWER_CODE: login.controls.FINANCIAL_POWER_CODE.value,
+      CFA_CODE: login.controls.CFA_CODE.value,
+      CONCURRENCE_BY: login.controls.concurrence_by.value,
+      BUDGET_HEAD_CODE: login.controls.budget_head_code.value,
+      IS_PAC: login.controls.pac_status.value
+    }
+
+    this.http.post('http://192.168.0.233:4000/model', formValue)
+      .subscribe(
+        (response) => console.log(response),
+        (error) => console.log(error)
+      );
   }
 
   
