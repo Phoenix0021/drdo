@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class FormComponentComponent {
   constructor(private http: HttpClient) {}
-  
+  responses = '';
   submit(login: any) {
     console.log("Details entered successfully ");
     console.log(login.controls);
@@ -23,14 +23,16 @@ export class FormComponentComponent {
       IS_PAC: login.controls.pac_status.value
     }
 
-    this.http.post('http://192.168.0.233:4000/model', formValue)
+    this.http.post('http://localhost:4000/model', formValue)
       .subscribe(
-        (response) => console.log(response),
+        (response) => {
+          console.log(response);
+          this.responses = "The predicted number of days is: " + JSON.stringify(response);
+        },
         (error) => console.log(error)
       );
   }
 
-  
   countries = ['US', 'UK', 'China', 'Russia', 'Germany', 'India', 'Italy', 'Canada'];
   mode_of_tender = ['Procurement Through GeM','CAPSI','Through LPC','Rate Contracts','Single Tender','Limited','Open','CARS','Other'];
   method_of_purchase = ['Procurement Through GeM','CAPSI','Through LPC','Rate Contracts','Single Tender','Limited','Open','CARS','Other'];
